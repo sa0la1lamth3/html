@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity5</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: 'Roboto';
+        }
+        .header__color {
+            color: #ffffff;
+            background-color: blue;
+            padding: 10px;
+        }
+        .header__logo {
+            max-width: 1200px;
+            margin: auto;
+        }
+        .header__logo img{
+            vertical-align: middle;
+            margin-right: 20px;
+        }
+        .header__logo h1{
+            vertical-align: middle;
+            display: inline-block;
+        }
+        .header__active--size {
+            float:right;
+            padding-top: 20px;
+        }
+        .header__active--size a{
+            margin-left: 15px;
+        }
+        .main__background{
+            background-image: url('../Lesson5/banner.jpg');
+            background-position: center;
+            background-size: cover;
+            height: 400px;
+            justify-content: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+        }
+        .main__background--opacity{
+            background-color: black;
+            opacity: 0.6;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+
+         .main__background--plusplus{
+            width: 200px;
+            text-transform: uppercase;
+            text-align: center;
+            justify-content: center;
+            z-index: 1;
+            animation-name: plusplus;
+        }
+        .main__background--plusplus h1{
+            padding-bottom: 20px;
+            color: white;
+            animation-name: plusPlus;
+            animation-duration: 2s;
+    
+        }
+        @keyframes plusPlus {
+            from {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        button{
+            text-transform: uppercase;
+            border: 0px;
+            width: 190px;
+            height: 40px;
+            background-color: blue;
+            color: white;
+            font-size: 17px;
+            border-radius: 6px;
+            animation-name: button;
+            animation-duration: 1s;
+
+        }
+        @keyframes button {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+        button:hover{
+            background-color: orange;
+
+        }
+        .section__frames {
+            max-width: 1200px;
+            margin: auto;
+
+        }
+        .section__text {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .section__text h1 {
+            font-size: 30px;
+        }
+        h2{
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 30px;
+            margin-top: 30px;
+            font-size: 25px;
+        }
+        .section__course{
+            margin-top: 30px;
+
+        }
+        .section__course--cover{
+            width: 250px;
+            height: 300px;
+            border: 1px solid #ececec;
+            border-top-right-radius: 8px;
+            border-top-left-radius: 8px;
+            display: inline-block;
+            margin-right: 10px;
+            background-color:#ececec;
+        }
+        .section__course--cover img{
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            background-repeat: no-repeat;
+        }.section__course--size{
+            margin: 15px;
+        }
+        .section__course--teacher{
+            margin-bottom: 20px;
+            margin-top: 15px;
+            vertical-align: middle;
+        }
+        .section__course--teacher img{
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+        .section__course--teacher span{
+           margin-left: 10px;
+        }
+        .section__course--price{
+            text-align: right;
+            color: red;
+        }
+        .section__teacher{
+            border: 1px solid #ececec;
+            width: 450px;
+            height: 170px;
+            border-radius: 5px;
+            background-color: #ececec;
+            position: relative;
+            margin: 20px;
+            display: flex;
+            overflow: hidden;
+        }
+        .section__teacher--img{
+            width: 40%;
+            height: 100%;
+            overflow: hidden;
+            background-image: url(./my-tam-teacher.jpg);
+            background-position: center;
+            background-size: 100%;
+            transition: all 1s;
+        }
+        .section__teacher--info{
+            float: right;
+            width: 60%;
+            height: 100%;
+            padding: 20px;
+            z-index: 1;
+        }
+        .section__teacher--name{
+            text-transform: uppercase;
+            font-size: 18px;
+        }
+        .section__teacher--job{
+            font-style: italic;
+            font-size: 13px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .section__teacher--birthday{
+            font-size: 18px;
+        }
+        .section__teacher--lesson{
+            position: absolute;
+            background-color: black;
+            color: white;
+            bottom: 10px;
+            left: 10px;
+            padding: 5px 10px;
+            opacity: .7;
+        }
+        .section__teacher--flaxbox{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .section__studentinfo{
+            border: 1px solid black;
+            display: flex;
+            height: 400px;
+        }
+        .section__studentinfo--img{
+            width: 50%;
+
+        }
+        .section__studentinfo--font{
+            width: 50%;
+            margin: 30px;
+            text-align: left;
+           
+        }
+        h3 {
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            font-size: 25px;
+        }
+        .section__studentinfo--info{
+            
+            display: flex;
+            align-items: center;
+            margin: 10px;
+        }
+        label{
+            width: 150px;
+        
+        }
+        input{
+           height: 40px;
+           width: 300px;
+           border: 1px solid #011098;
+           border-radius: 4px;
+           padding-left: 10px;
+        }
+        .section__studentinfo--button{
+            float: right;
+            margin-top: 20px;
+        }
+        .footer__logo{
+            max-width: 1200px;
+            margin: auto;
+        }
+        .footer__img{
+            float: left;
+            width: 50%;
+        }
+        h4{
+            font-size: 20px;
+            margin: 20px;
+        }
+        .links{
+            display: inline-block;
+        }
+        ul{
+            list-style-type: none;
+        }
+        li{
+            margin-bottom: 7px;
+            
+        }
+        .section__text p::before{
+            content:'«';
+            color: blue;
+            font-size: 50px;
+            position: absolute;
+            top: 530px;
+            left: 322px;
+        }
+        .section__text p::after{
+            content:'»';
+            color: blue;
+            font-size: 50px;
+            position: absolute;
+            top: 589px;
+        }
+
+        .section__course--cover:hover{
+            box-shadow: 3px 3px 3px red;
+        }
+        .section__teacher:hover{
+            box-shadow: 5px 5px 5px #011098;
+        }
+        .section__teacher--img:hover{
+            background-size: 150%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header__color">
+            <div class="header__logo">
+                <img src="../Lesson5/logo.png" width="50" height="50" style="border-radius: 50%;">
+                <h1>PlusPlus Academy</h1>
+                <div class="header__active--size">
+                    <a style="border-bottom: 2px solid #ffffff">About us</a>
+                    <a>Courses</a>
+                    <a>Register</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main__background">
+            <div class="main__background--opacity"></div>
+            <div class="main__background--plusplus">
+                <h1>plus plus</h1>
+                <button>register now</button>
+            </div>
+        </div>
+        <section class="section__frames">
+            <div class="section__text">
+                <h1>Plus Plus, Where you can shine with us!</h1><br>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+            </div>
+        </section>
+        <section class="section__frames">
+            <div class="section__course">
+                <h2>soldout course</h2>
+                <div class="section__course--cover">
+                    <img src="../Lesson5/abc.png" alt="abc.png" width="100%" height="40%">
+                    <div class="section__course--size">
+                        <p>Khóa học lập trình Frontend căn bản</p>
+                        <div class="section__course--teacher">
+                            <img src="../Lesson5/my_tam.jpg" width="50" height="50">
+                            <span> Phan Thị Mỹ Tâm</span>
+                        </div>
+                        <p class="section__course--price">200.000VND</p>
+                    </div>
+                </div>
+                <div class="section__course--cover">
+                    <img src="../Lesson5/abc.png" alt="abc.png" width="100%" height="40%">
+                    <div class="section__course--size">
+                        <p>Khóa học lập trình Frontend căn bản</p>
+                        <div class="section__course--teacher">
+                            <img src="../Lesson5/my_tam.jpg" width="50" height="50">
+                            <span> Phan Thị Mỹ Tâm</span>
+                        </div>
+                        <p class="section__course--price">200.000VND</p>
+                    </div>
+                </div>
+                <div class="section__course--cover">
+                    <img src="../Lesson5/abc.png" alt="abc.png" width="100%" height="40%">
+                    <div class="section__course--size">
+                        <p>Khóa học lập trình Frontend căn bản</p>
+                        <div class="section__course--teacher">
+                            <img src="../Lesson5/my_tam.jpg" width="50" height="50">
+                            <span> Phan Thị Mỹ Tâm</span>
+                        </div>
+                        <p class="section__course--price">200.000VND</p>
+                    </div>
+                </div>
+                <div class="section__course--cover">
+                    <img src="../Lesson5/abc.png" alt="abc.png" width="100%" height="40%">
+                    <div class="section__course--size">
+                        <p>Khóa học lập trình Frontend căn bản</p>
+                        <div class="section__course--teacher">
+                            <img src="../Lesson5/my_tam.jpg" width="50" height="50">
+                            <span> Phan Thị Mỹ Tâm</span>
+                        </div>
+                        <p class="section__course--price">200.000VND</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section__frames">
+            <div>
+                <h2>our teacher</h2>
+                <div class="section__teacher--flaxbox">
+                    <div class="section__teacher">
+                        <div class="section__teacher--img"></div>
+                        <div class="section__teacher--info">
+                            <p class="section__teacher--name">phạm mỹ tâm</p>
+                            <p class="section__teacher--job">Job title: Singer, Dancer...</p>
+                            <p class="section__teacher--birthday">22-12-1992</p>
+                        </div>
+                        <p class="section__teacher--lesson">10 khóa học</p>
+                    </div>
+                    <div class="section__teacher">
+                        <div class="section__teacher--img"></div>
+                        <div class="section__teacher--info">
+                            <p class="section__teacher--name">phạm mỹ tâm</p>
+                            <p class="section__teacher--job">Job title: Singer, Dancer...</p>
+                            <p class="section__teacher--birthday">22-12-1992</p>
+                        </div>
+                        <p class="section__teacher--lesson">10 khóa học</p>
+                    </div>
+                    <div class="section__teacher">
+                        <div class="section__teacher--img"></div>
+                        <div class="section__teacher--info">
+                            <p class="section__teacher--name">phạm mỹ tâm</p>
+                            <p class="section__teacher--job">Job title: Singer, Dancer...</p>
+                            <p class="section__teacher--birthday">22-12-1992</p>
+                        </div>
+                        <p class="section__teacher--lesson">10 khóa học</p>
+                    </div>
+                    <div class="section__teacher">
+                        <div class="section__teacher--img"></div>
+                        <div class="section__teacher--info">
+                            <p class="section__teacher--name">phạm mỹ tâm</p>
+                            <p class="section__teacher--job">Job title: Singer, Dancer...</p>
+                            <p class="section__teacher--birthday">22-12-1992</p>
+                        </div>
+                        <p class="section__teacher--lesson">10 khóa học</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section__frames">
+            <div style="margin-bottom: 50px;">
+                <h2>contact us</h2>
+                <div class="section__studentinfo">
+                    <div class="section__studentinfo--img">
+                        <img src="../Lesson5/abc.png" height="100%" width="100%">
+                    </div>
+                    <div class="section__studentinfo--font">
+                        <h3>please fill out below form</h3><br>
+                        <form>
+                            <div class="section__studentinfo--info">
+                                <label for="name">Fullname</label>
+                                <input type="test" id="name" placeholder="Fullname"> 
+                            </div>
+                            <div class="section__studentinfo--info">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="Email">
+                            </div>
+                            <div class="section__studentinfo--info">
+                                <label for="Phone">Phone</label>
+                                <input type="number" id="Phone" placeholder="Phone">
+                            </div>
+                            <div class="section__studentinfo--info">
+                                <label for="age">Age</label>
+                                <input type="number" id="age" placeholder="Age" min="15"
+                                max="30">
+                            </div>
+                            <div class="section__studentinfo--button">
+                                <button type="submit">Register now</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="header__color">
+            <div class="footer__logo">
+                <div class="footer__img">
+                    <img src="../Lesson5/logo.png" width="50" height="50" style="border-radius: 50%;">
+                    <h4>13 Nguyen Thai Hoc Street, Ba Dinh, Ha Noi</h4>
+                </div>
+                <div class="links">
+                    <ul>
+                        <li><a>Thông tin chung</a></li>
+                        <li><a>Chính sách</a></li>
+                        <li><a>Điều khoản</a></li>
+                        <li><a>Về chúng tôi</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
