@@ -1,0 +1,317 @@
+@media screen and (max-width:600px) {
+    .header__color {
+        color: #ffffff;
+        background-color: blue;
+        padding: 4%;
+    }
+    .header__logo {
+        max-width: 80%;
+        margin: auto;
+        margin-right: 6%;
+    }
+    .header__logo img{
+        vertical-align: middle;
+        margin-right: 5%;
+        width: 20%;
+        height: 20%;
+    }
+    .header__logo h1{
+        vertical-align: middle;
+        display: inline-block;
+        font-size: 200%;
+    }
+    .header__active--size {
+        
+        padding-top: 5%;
+    }
+    .header__active--size a{
+        margin-left: 10%;
+        font-size: 130%;
+    }
+    .main__background{
+        background-image: url('../Lesson5/banner.jpg');
+        background-position: center;
+        background-size: cover;
+        height: 450px;
+        justify-content: center;
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+    .main__background--opacity{
+        background-color: black;
+        opacity: 0.6;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+
+    .main__background--plusplus{
+        width: 50%;
+        text-transform: uppercase;
+        text-align: center;
+        justify-content: center;
+        z-index: 1;
+        animation-name: plusplus;
+    }
+    .main__background--plusplus h1{
+        font-size: 230%;
+        padding-bottom: 5%;
+        color: white;
+        animation-name: plusPlus;
+        animation-duration: 5s;
+
+    }
+    @keyframes plusPlus {
+        0% {
+            transform: translateY(-100px);
+            font-size: 30px;
+            opacity: 0;
+        }
+        50% {
+            transform: translateY(100px);
+            font-size: 20px;
+
+        }
+
+        100% {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+
+    .main__background--plusplus button{
+        text-transform: uppercase;
+        border: 0px;
+        width: 80%;
+        height: 40px;
+        background-color: blue;
+        color: white;
+        font-size: 25px;
+        border-radius: 6px;
+        animation-name: button;
+        animation-duration: 1s;
+        transition: background-color 0.5s;
+
+    }
+    @keyframes button {
+        from {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+    button:hover{
+        background-color: orange;
+
+    }
+    .section__frames {
+        max-width: 90%;
+        margin: auto;
+
+    }
+    .section__text {
+        margin-top: 5%;
+        text-align: center;
+    }
+    .section__text h1 {
+        font-size: 40px;
+    }
+    h2{
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 5%;
+        margin-top: 5%;
+        font-size: 30px;
+    }
+    .section__course{
+        margin-top: 30px;
+        
+    
+    }
+    .section__course--cover{
+        width: 100%;
+        height: 400px;
+        border: 1px solid #ececec;
+        border-radius: 8px;
+        margin-bottom: 5%;
+        
+        margin-right: 10px;
+        background-color:#ececec;
+        transition: box-shadow 0.5s;
+    }
+    .section__course--cover img{
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        background-repeat: no-repeat;
+        height: 50%;
+    }.section__course--size{
+        margin: 15px;
+        height: 50%;
+        font-size: 175%;
+    }
+    .section__course--teacher{
+        margin-bottom: 20px;
+        margin-top: 15px;
+        vertical-align: middle;
+    }
+    .section__course--teacher img{
+        border-radius: 50%;
+        vertical-align: middle;
+        width: 80px;
+        height: 80px;
+    }
+    .section__course--teacher span{
+    margin-left: 10px;
+    }
+    .section__course--price{
+        text-align: right;
+        color: red;
+    }.section__teacher{
+        border: 1px solid #ececec;
+        width: 100%;
+        height: 200px;
+        border-radius: 5px;
+        background-color: #ececec;
+        position: relative;
+        margin-bottom: 20px;
+        display: flex;
+        overflow: hidden;
+        transition: box-shadow 0.5s;
+    }
+    .section__teacher--img{
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        background-image: url(./my-tam-teacher.jpg);
+        background-position: center;
+        background-size: 100%;
+        transition: all 1s;
+    }
+    .section__teacher--info{
+        float: right;
+        width: 50%;
+        height: 100%;
+        padding: 20px;
+        z-index: 1;
+    }
+    .section__teacher--name{
+        text-transform: uppercase;
+        font-size: 25px;
+    }
+    .section__teacher--job{
+        font-style: italic;
+        font-size: 21px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .section__teacher--birthday{
+        font-size: 23px;
+    }
+    .section__teacher--lesson{
+        position: absolute;
+        background-color: black;
+        color: white;
+        bottom: 20px;
+        left: 20px;
+        padding: 10px 20px;
+        font-size: 100%;
+        opacity: .7;
+    }
+    .section__teacher--flaxbox{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .section__studentinfo{
+        border: 1px solid black;
+        display: flex;
+        height: 800px;
+        flex-direction: column
+        
+    }
+    .section__studentinfo--img{
+        width: 100%;
+        height: 50%;
+
+    }
+    .section__studentinfo--font{
+        width: 90%;
+        height: 45%;
+        margin: 5%;
+        text-align: left;
+    
+    }
+    h3 {
+        text-transform: uppercase;
+        font-size: 25px;
+    }
+    .section__studentinfo--info{
+        
+        display: flex;
+        align-items: center;
+        margin: 3%;
+    }
+    label{
+        width: 40%;
+    
+    }
+    input{
+    height: 40px;
+    width: 60%;
+    border: 1px solid #011098;
+    border-radius: 4px;
+    padding-left: 10px;
+    }
+    .section__studentinfo--button {
+        text-align: right;
+    }
+    .section__studentinfo--button button{
+        text-transform: uppercase;
+        border: 0px;
+        width: 50%;
+        height: 40px;
+        background-color: blue;
+        color: white;
+        font-size: 25px;
+        border-radius: 6px;
+        transition: background-color 0.5s;
+        margin-top: 3%;
+    }
+    .footer__logo{
+        max-width: 1200px;
+        margin: auto;
+    }
+    .footer__img{
+        width: 50%;
+    }
+    h4{
+        font-size: 20px;
+        margin: 20px 0px;
+    }
+    .links{
+        display: inline-block;
+    }
+    ul{
+        list-style-type: none;
+    }
+    li{
+        margin-bottom: 7px;
+        
+    }
+
+    .section__course--cover:hover{
+        box-shadow: 3px 3px 3px red;
+    }
+    .section__teacher:hover{
+        box-shadow: 5px 5px 5px #011098;
+    }
+    .section__teacher--img:hover{
+        background-size: 150%;
+    }
+}
+    
