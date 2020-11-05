@@ -144,6 +144,25 @@
         text-align: center;
         justify-content: center;
     }
+    .section__img--text {
+        display: grid;
+        justify-self: center;
+        text-align: center;
+        max-width: 356px;
+    }
+    .section__img--text h2{
+        font-size: 20px;
+        margin-bottom: 20px;
+
+    }
+
+    .section__img--email {
+        text-align: center;
+    }
+    .section__img button {
+        margin-left: 0px;
+        margin-top: 3px;
+    }
     .section__content--img {
         height: 300px;
     }
@@ -191,5 +210,15 @@
     }
     .footer__item--link {
         font-size: 7px;
+    }
+}
+
+
+
+
+
+@media (max-width : 370px) {
+    .section__img--text {
+        max-width: ;
     }
 }
