@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Playfair Display, sans-serif;
+}
+.header__image {
+    background-image: url(../Lesson11/simple-house-01.jpg);
+    height: 400px;
+    background-size: cover;
+    background-position:center;
+    background-attachment: fixed;
+    flex-direction: column;
+    color: #66f902;
+}
+.header__image--name {
+    position: relative;
+    top: 300px
+}
+
+.header__image--name h1 {
+    font-size: 35px;
+}
+.header__image--name h6 {
+    font-size: 18px;
+}
+.header__image--text {
+    text-align: center;
+    font-size: 20px;
+}
+.header__image--text ul {
+    margin: 15px;
+}
+.header__image--text a {
+    /* border-bottom: 1px solid #66f902;
+    padding: 0px;
+    margin-left: 10px; */
+}
+.header__image--text a:checked {
+    border-bottom: 1px solid #66f902;
+}
